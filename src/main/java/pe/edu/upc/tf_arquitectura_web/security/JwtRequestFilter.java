@@ -17,6 +17,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 //Clase 6
+
 @Component
 public class JwtRequestFilter extends OncePerRequestFilter {
 	@Autowired
