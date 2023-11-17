@@ -42,6 +42,8 @@ public class JwtRequestFilter extends OncePerRequestFilter {
 			}
 		} else {
 			logger.warn("JWT Token no inicia con la palabra Bearer");
+			response.setStatus(HttpServletResponse.SC_UNAUTHORIZED); // Devolver código de estado 401
+			return; // Detener el procesamiento de la solicitud
 		}
 
 		// Once we get the token validate it.
